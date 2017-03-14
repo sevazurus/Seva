@@ -8,12 +8,12 @@ namespace WpfApplication1
 {
     class Igrok
     {
-        private string surname;
+        private string surnam;
 
         public string Surname
         {
-            get { return surname; }
-            set { surname = value; }
+            get { return surnam; }
+            set { surnam = value; }
         }
 private string name;
 
