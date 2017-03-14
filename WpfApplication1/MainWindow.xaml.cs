@@ -48,6 +48,7 @@ namespace WpfApplication1
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             FileStream fl = new FileStream("C:\\Users\\sevam\\Desktop\\turnir.txt", FileMode.Open, FileAccess.Read);
+
             StreamReader sr = new StreamReader(fl);
 
 
