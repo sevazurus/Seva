@@ -15,18 +15,25 @@ using System.Windows.Shapes;
 namespace WpfApplication1
 {
     /// <summary>
-    /// Логика взаимодействия для SpisokTurnirov.xaml
+    /// Логика взаимодействия для Search.xaml
     /// </summary>
-    public partial class SpisokTurnirov : Window
+    public partial class Search : Window
     {
-        public SpisokTurnirov()
+        public Search()
         {
             InitializeComponent();
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (textBox.Text=="" || textBox1.Text=="")
+            {
+                MessageBox.Show("Некорректные данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                DialogResult = true;
+            }
         }
     }
 }

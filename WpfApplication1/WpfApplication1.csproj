@@ -55,18 +55,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddGame.xaml.cs">
+      <DependentUpon>AddGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="Igrok.cs" />
-    <Compile Include="Itog.xaml.cs">
-      <DependentUpon>Itog.xaml</DependentUpon>
+    <Compile Include="Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Soperniki.xaml.cs">
-      <DependentUpon>Soperniki.xaml</DependentUpon>
+    <Compile Include="SearchGame.xaml.cs">
+      <DependentUpon>SearchGame.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SpisokTurnirov.xaml.cs">
-      <DependentUpon>SpisokTurnirov.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Turniry.cs" />
-    <Page Include="Itog.xaml">
+    <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Delete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,11 +96,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Soperniki.xaml">
+    <Page Include="Search.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SpisokTurnirov.xaml">
+    <Page Include="SearchGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

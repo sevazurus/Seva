@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace WpfApplication1
 {
-    class Igrok
+    public class Igrok
     {
-        private string surnam;
+        private string surname;
 
         public string Surname
         {
-            get { return surnam; }
-            set { surnam = value; }
+            get { return surname; }
+            set { surname = value; }
         }
-private string name;
+        private string name;
 
-public string Name
-{
-    get { return name; }
-    set { name = value; }
-}
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         private int rating;
 
         public int Rating
@@ -29,6 +29,8 @@ public string Name
             get { return rating; }
             set { rating = value; }
         }
+        public Igrok()
+            {
 
     }
 }
