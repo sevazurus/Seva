@@ -36,23 +36,27 @@ namespace WpfApplication1
             }
             sr.Close();
             fs.Close();
-            FileStream fs1 = new FileStream("players.txt", FileMode.Open, FileAccess.Read);
+            FileStream fs1 = new FileStream("games.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr1 = new StreamReader(fs1);
-            while (!sr.EndOfStream)
+            while (!sr1.EndOfStream)
             {
                 Game game = new Game();
+                Igrok igrok = new Igrok();
+                Igrok igrok2 = new Igrok();
+                game.Player1 = igrok;
+                game.Player2 = igrok2;
                 string[] line = new string[7];
-                line = sr.ReadLine().Split(' ');
-                game.Player1.Rating = int.Parse(line[0]);
+                line = sr1.ReadLine().Split(' ');
+                /*game.Player1.Rating = int.Parse(line[0]);
                 game.Player1.Surname = line[1];
                 game.Player1.Name = line[2];
                 game.Score = line[3];
                 game.Player2.Surname = line[4];
                 game.Player2.Name = line[5];
-                game.Player2.Rating = int.Parse(line[6]);
+                game.Player2.Rating = int.Parse(line[6]);*/
             }
-            sr.Close();
-            fs.Close();
+            sr1.Close();
+            fs1.Close();
             InitializeComponent();
         }
         private List<Igrok> players = new List<Igrok>();
@@ -149,7 +153,7 @@ namespace WpfApplication1
                 {
                     if (game.Player1.Surname == search.textBox.Text && game.Player1.Name == search.textBox1.Text && game.Player2.Surname==search.textBox2.Text && game.Player2.Name == search.textBox3.Text)
                     {
-                        listBox.Items.Add(game.Score + " " + game.Player1.Surname + " " + game.Player1.Name + " " + game.Score + " " + game.Player2.Surname + " " + game.Player2.Name + " " + game.Player2.Rating);
+                        listBox.Items.Add(game.Player1.Rating + " " + game.Player1.Surname + " " + game.Player1.Name + " " + game.Score + " " + game.Player2.Surname + " " + game.Player2.Name + " " + game.Player2.Rating);
                         ok = true;
                     }
                 }

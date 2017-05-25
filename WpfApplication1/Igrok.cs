@@ -30,7 +30,9 @@ namespace WpfApplication1
             set { rating = value; }
         }
         public Igrok()
-            {
+        {
+
+        }
 
     }
 }
